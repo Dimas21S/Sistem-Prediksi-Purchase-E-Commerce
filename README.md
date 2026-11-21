@@ -1,19 +1,14 @@
 # Deployment Model Prediksi Purchases
 
 ## Isi
-- `api.py` – REST API (FastAPI): `/health`, `/predict`, `/predict/batch`
-- `app.py` – antarmuka Streamlit (mode model lokal atau memanggil REST API)
-- `train_model.py` – melatih ulang model dari `ecommerce_clean.csv` dan menyimpan `best_model.pkl`
-- `ecommerce_clean.csv` – data bersih hasil notebook
-- `best_model.pkl` – model Linear Regression
+- `app.py` – antarmuka Streamlit
+- `best_model.pkl` – model regresi terbaik
 - `requirements.txt`
 
 ## Menjalankan
 ```bash
 pip install -r requirements.txt
-python train_model.py             # latih ulang model agar cocok dengan versi library Anda
-uvicorn api:app --port 8000        # terminal 1 (docs otomatis: http://localhost:8000/docs)
-streamlit run app.py               # terminal 2
+streamlit run app.py               # terminal 1
 ```
 Contoh request:
 ```bash
